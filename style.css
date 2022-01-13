@@ -1,28 +1,31 @@
+/* elements de base
+la 1ere ligne avec le selecteur universel "*" sauf pour "before et after" */
 *, ::before, ::after {
-    box-sizing: border-box;
+    box-sizing: border-box; /* calcul margin et padding des éléments pour donner leur hauteur/ largeur */
     margin: 0;
     padding: 0;
 }
+/* margin + padding 0 pour ne pas être embêté avec ceux de base. Ex: liste, body, ... */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family : 'The Nautigal', cursive ;
 }
 
 h1 {
-    font-family: Russo One, Arial;
     font-weight: lighter;
-    letter-spacing: 2px;
+    letter-spacing: 2 em;
     text-align: center;
-    padding: 30px 0;
-    font-size: 40px;
+    padding : 20px 0;
+    font-size: 40px; 
 }
 
-h2 {
-    font-family: Russo One, Arial;
+h2{
     font-weight: lighter;
-    letter-spacing: 2px;
+    letter-spacing : 1.1em;
     text-align: center;
     padding: 20px 0;
+    font-size: 30px;
+    color: yellowgreen;
 }
 
 .container-global {
@@ -30,44 +33,46 @@ h2 {
     max-width: 800px;
     margin: 0 auto;
     height: auto;
-    /*background : pink */
 }
 
 .question-block {
-    padding: 15px 25px 25px;
-    margin: 20px;
-    border-radius : 5px;
-    box-shadow: 0 2px 10px rgba(24, 1, 1, 0.5);
+padding: 15px 25px 25px;
+margin: 20px;
+border-radius: 8px;
+box-shadow: 0 5px 15px black;
 }
+
 .question-block h4 {
-    padding: 10px 0;
+    padding : 10px 0;
     font-size: 22px;
 }
 
 .question-block label {
-    font-size: 20px;
+    font-size: 15px;
 }
 
-.question-block input[type="radio"] {
-    transform: scale(1.8);
-    margin: 10px;
+.question-block input[type="radio"]{
+    transform: scale(1.5);
+    margin: 8px;
 }
 
-.resultats {
+.résultats {
     padding: 25px;
-    margin: 10px 0px 70px;
+    margin: 10px 0 40px;
     border-radius: 5px;
-    box-shadow: 0 2px 10px black;
+    box-shadow: 0 5px 15px black;
 }
 
-.resultats h2 {
+.résultats h3 {
     text-align: center;
 }
+
 .aide {
     text-align: center;
     font-size: 20px;
     margin-top: 10px;
 }
+
 .note {
     text-align: center;
     font-size: 25px;
@@ -77,18 +82,31 @@ h2 {
 form button {
     border: none;
     outline: none;
-    border: 1px solid #333;
+    border: 3px solid #333;
     border-radius: 5px;
     display: block;
-    margin: 20px auto;
+    margin: 30px auto;
     padding: 20px 40px;
     cursor: pointer;
     font-size: 25px;
     transition: background-color 0.2s ease-in-out;
+    color: yellowgreen; 
+    font-weight: 800;
 }
 
 form button:hover {
-    background-color: lightblue;
+    background-color: lightcyan;
+}
+
+.text {
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+}
+
+.choix {
+    color: yellowgreen;
+    letter-spacing: 1.1em;
 }
 
 .echec {
@@ -109,8 +127,3 @@ form button:hover {
         transform: translateX(0px);
     }
 }
-
-
-
-
-
